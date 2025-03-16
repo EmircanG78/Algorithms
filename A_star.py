@@ -35,21 +35,23 @@ class Node:
             current = heapq.heappop(open_list) # Açık listedeki en düşük F değerine sahip düğüm çıkarılır ve ziyaret edilir.
             print(f"Ziyaret edilen düğüm:{current.name} (F={current.f()})")
 
-            if current.name == goal:
+            if current.name == goal:    # Hedef düğüme ulaşılırsa algoritmayı bitirir.
                 print("Hedefe ulaşıldı.")
                 return
             
-            closed_list.add(current.name)
+            closed_list.add(current.name)  # Ziyaret edilen düğümü listeye ekler.
 
             for neighbor, cost in graph[current.name]:
+                # Şu anki düğümün komşularını ve maliyetlerini döner. 
                 if neighbor in closed_list:
                     continue
+                # Komşu düğüm daha önce ziyaret edilmişse onu atlar.
 
-                g = current.g + cost
-                h = heuristics[neighbor]
-                neighbor_node = Node(neighbor,g,h)
+                g = current.g + cost    # Mevcut düğümün G değeri + komşuya gitme maliyeti
+                h = heuristics[neighbor]    # Komşunun hedefe olan tahmini uzaklığı
+                neighbor_node = Node(neighbor,g,h)  # Komşu düğüm oluşturulur. G ve H değerleriyle yeni bir Node oluşturur.
 
-                heapq.heappush(open_list,neighbor_node)
+                heapq.heappush(open_list,neighbor_node) # yeni düğümü açık listeye ekliyoruz, liste F değerine göre sıralanır.
 
 # Grafik: düğümler ve komşuları (komşu, maliyet)
 graph = {
@@ -75,7 +77,6 @@ heuristics = {
 
 # A* çalıştır
 Node.a_star('A', 'G', graph, heuristics)
-
-    
-
-        
+# Başlangıç düğümü: A
+# Hedef düğüm: G
+# Graf ve heuristik verileri kullanılarak yol aranır.     
