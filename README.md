@@ -1,34 +1,50 @@
-# 🧠 Algorithms (Algoritmalar) Reposu
+# 🧠 Algorithms Repository
 
-Merhaba!  
-Bu repo, kendi öğrenme sürecimde yazdığım temel algoritmaları içeriyor.  
-Şimdilik sadece **BFS (Breadth First Search)** algoritması var ama zamanla yeni algoritmalar eklemeye devam edeceğim 🚀
+Merhaba! 👋  
+Bu repo, kendi öğrenme sürecimde yazdığım temel algoritmaları ve yol bulma yöntemlerini içeriyor.  
+Şu anda **A* (A-Star)** ve **BFS (Breadth-First Search)** algoritmalarını sade ve açıklamalı Python kodlarıyla paylaştım. Zamanla yeni algoritmalar eklemeye devam edeceğim 🚀
 
-Python ile adım adım, bol açıklamalı ve sade bir şekilde kodladım.  
-Amacım, hem kendi öğrendiklerimi pekiştirmek hem de benim gibi temel algoritmalar öğrenmek isteyenlere yardımcı olmak.
+Amacım, hem öğrendiklerimi pekiştirmek hem de algoritma öğrenenler için anlaşılır bir kaynak oluşturmak.
 
 ---
 
 ## ✅ İçerik
 
-- **BFS (Breadth First Search)**  
-  Genişlik öncelikli arama algoritması.  
-  Kuyruk (queue) mantığıyla çalışır ve en kısa yolu bulmak için kullanılır.  
-  Adım adım Python kodu ve açıklamaları içerir.
+### 📂 `Astar`
+- **A* (A-Star) Algoritması**
+  - En kısa yol bulma algoritmalarından biridir.
+  - Sezgisel (heuristic) yaklaşımla çalışır.
+  - `f(n) = g(n) + h(n)` fonksiyonunu kullanarak en iyi yolu hesaplar.
+  - Python ile açıklamalı kod ve detaylı [README](./Astar/README.md) içerir.
+
+### 📂 `BFS`
+- **BFS (Breadth-First Search) Algoritması**
+  - Genişlik öncelikli arama algoritmasıdır.
+  - Kuyruk (queue) yapısını kullanır.
+  - En kısa yolu bulmak için kullanılır.
+  - Python ile açıklamalı kod ve detaylı [README](./BFS/README.md) içerir.
 
 ---
 
 ## 🎯 Neden Bu Repo?
 
-- Algoritmaları **adım adım** öğrenirken not tutar gibi yazdım.  
-- Her satırı **açıklamalı**, kafa karışıklığına yer yok.  
-- Yeni başlayanların **temelleri sağlam atmasını** sağlar.  
-- Benim gibi öğrenenler için **pratik ve sade** bir kaynak.
+- Algoritmaları **adım adım** öğrenmek isteyenler için birebir.
+- Her kod satırı **yorumlu ve açıklamalı**, kafa karışıklığına yer yok.
+- Python dilinde sade ve temiz örnekler.
+- **Yeni başlayanlara yönelik**, temel mantığı öğretmeyi hedefleyen bir kaynak.
+- Kendi öğrenme sürecimi kayıt altına alıyorum ve paylaşarak öğrenmeyi güçlendiriyorum.
 
 ---
 
 ## 🚀 Nasıl Çalıştırılır?
 
-Python yüklü bir ortamda, terminalden çalıştırabilirsin:  
+Python kurulu bir ortamda terminalden çalıştırabilirsin:
+
 ```bash
+# A* Algoritması için
+cd Astar
+python A_star.py
+
+# BFS Algoritması için
+cd BFS
 python bfs.py
